@@ -3,10 +3,9 @@ FROM alpine:latest
 
 RUN \
 	mkdir /root/bin /aws; \
-	apk -Uuv add groff less bash python py-pip jq curl docker && \
-	pip install --upgrade pip; \
-	pip install awscli && \
-	apk --purge -v del py-pip && \
+	apk -Uuv add groff less bash python3 py-pip jq curl docker && \
+	pip3 install --upgrade pip; \
+	pip3 install awscli && \
 	rm /var/cache/apk/* && \
 
 
